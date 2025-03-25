@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+https://github.com/user-attachments/assets/33ad8820-738f-4bbf-aee8-e08275b145e9
+
 ![POC pic](./images/poc-pic1.png)
 
 ## Available Scripts
