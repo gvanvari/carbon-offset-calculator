@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/carbon-offset-calculator/static/css/main.07071e4f.css",
+    "main.js": "/carbon-offset-calculator/static/js/main.6a9ecf85.js",
+    "index.html": "/carbon-offset-calculator/index.html",
+    "main.07071e4f.css.map": "/carbon-offset-calculator/static/css/main.07071e4f.css.map",
+    "main.6a9ecf85.js.map": "/carbon-offset-calculator/static/js/main.6a9ecf85.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07071e4f.css",
+    "static/js/main.6a9ecf85.js"
+  ]
+}
