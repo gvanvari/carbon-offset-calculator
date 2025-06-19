@@ -1,0 +1,17 @@
+name: Security vulnerabilities check
+
+on : push
+
+jobs:
+  security-checks:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Software Composition Analysis using Snyk
+      - uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        continue-on-error: true
+      
