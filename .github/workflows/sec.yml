@@ -4,15 +4,19 @@ jobs:
   security-checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Software Composition Analysis using Snyk
-        uses: snyk/actions/node@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        continue-on-error: true
-      - name: Upload report
-        uses: actions/upload-artifact@v4
-        with:
-          name: my-report
-          path: synk-scan-report.txt
+     - uses: actions/checkout@master
+     - name: Software Composition Analysis using Snyk
+       uses: snyk/actions/node@master
+       env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+       continue-on-error: true
+     - name: Run Snyk and save output
+       run: snyk test --all-projects --json > synk-scan-report.txt
+       env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+     - name: Upload report
+       uses: actions/upload-artifact@v4
+       with:
+        name: my-report
+        path: synk-scan-report.txt
       
