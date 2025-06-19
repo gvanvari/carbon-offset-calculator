@@ -10,4 +10,9 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         continue-on-error: false
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-report
+          path: synk-scan-report.txt
       
